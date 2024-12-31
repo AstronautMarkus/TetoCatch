@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useState } from 'react';
 import './Header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faVideo, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 interface HeaderProps {
   title: string;
@@ -31,13 +33,13 @@ const Header: React.FC<HeaderProps> = ({ title, showBackButton, onBackButtonClic
       <h1 className="header-title">{title}</h1>
       <div className={`sidebar ${isSidebarOpen ? 'sidebar-open' : 'sidebar-close'}`}>
         <button onClick={() => handleCloseSidebar('home')} className="sidebar-item">
-          Home
+          <FontAwesomeIcon icon={faHome} /> Home
         </button>
         <button onClick={() => handleCloseSidebar('videos')} className="sidebar-item">
-          Videos
+          <FontAwesomeIcon icon={faVideo} /> Videos
         </button>
         <button onClick={() => handleCloseSidebar('about')} className="sidebar-item">
-          About
+          <FontAwesomeIcon icon={faInfoCircle} /> About
         </button>
       </div>
     </div>
