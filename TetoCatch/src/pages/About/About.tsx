@@ -1,11 +1,14 @@
 import * as React from 'react';
+import './About.css';
 
 const About: React.FC = () => {
   return (
     <div className="about-section">
-      <h1>About TetoCatch</h1>
-      <p>We are the best at what we do!</p>
-      <p>Hell yeah</p>
+      
+      <img src="/assets/img/TetoCatch-Logo.png" alt="TetoCatch-Logo" />
+
+      <p>Your download videos app!</p>
+      
     </div>
   );
 };

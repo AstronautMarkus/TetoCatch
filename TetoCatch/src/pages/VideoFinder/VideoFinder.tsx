@@ -6,14 +6,14 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const VideoFinder: React.FC = () => {
     return (
         <div className="container">
-            <div className="logo">TetoCatch</div>
+            <img src="/assets/img/TetoCatch-Logo.png" alt="TetoCatch-Logo" />
             <div className="search-bar">
                 <input type="text" className="search-input" placeholder="Paste a valid URL..." />
                 <button className="search-button">
                     <FontAwesomeIcon icon={faSearch} />
                 </button>
             </div>
-            <p className="info-text">Supports multiple social networks</p>
+            <p className="info-text">Supports multiple social networks!</p>
         </div>
     );
 };
