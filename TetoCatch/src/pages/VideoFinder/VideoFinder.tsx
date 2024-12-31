@@ -5,7 +5,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const VideoFinder: React.FC = () => {
     return (
-        <div className="container">
+        <div className="container home-section">
             <img src="/assets/img/TetoCatch-Logo.png" alt="TetoCatch-Logo" />
             <div className="search-bar">
                 <input type="text" className="search-input" placeholder="Paste a valid URL..." />
