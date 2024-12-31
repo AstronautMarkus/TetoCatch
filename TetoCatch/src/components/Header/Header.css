@@ -73,12 +73,12 @@
 .menu-item {
   display: block;
   padding: 10px 20px;
-  color: white;
+  color: black; /* Change color to black */
   text-decoration: none;
 }
 
 .menu-item:hover {
-  background-color: #ffccda;
+  background-color: black; /* Change hover background color to black */
 }
 
 .sidebar {
@@ -105,19 +105,20 @@
   transform: translateX(-100%);
 }
 
-/* Remove the close-sidebar class */
+
 .close-sidebar {
   display: none;
 }
 
 .sidebar-item {
+  background-color: #333; /* Default background color to gray */
   padding: 15px 20px;
-  color: white;
+  color: white; /* Change color to black */
   text-decoration: none;
 }
 
 .sidebar-item:hover {
-  background-color: #444;
+  background-color: #202020; /* Change hover background color to black */
 }
 
 /* Responsive adjustments */

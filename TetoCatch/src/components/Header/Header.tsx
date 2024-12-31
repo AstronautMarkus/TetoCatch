@@ -1,21 +1,23 @@
 import * as React from 'react';
+import { useState } from 'react';
 import './Header.css';
 
 interface HeaderProps {
-  title: string; // Custom header title
-  showBackButton?: boolean; //
-  onBackButtonClick?: () => void; //
+  title: string;
+  showBackButton?: boolean;
+  onBackButtonClick?: () => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ title, showBackButton, onBackButtonClick }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleMenuToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleCloseSidebar = () => {
-    setIsSidebarOpen(false);
+  const handleCloseSidebar = (section: string) => {
+    window.location.hash = section; // Change URL>
+    setIsSidebarOpen(false); // Close sidebar
   };
 
   return (
@@ -26,16 +28,17 @@ const Header: React.FC<HeaderProps> = ({ title, showBackButton, onBackButtonClic
         <div></div>
       </button>
       <img src="/assets/img/image.jpg" alt="icon" className="header-icon" />
-      {showBackButton && (
-        <button className="back-button" onClick={onBackButtonClick}>
-          ←
-        </button>
-      )}
       <h1 className="header-title">{title}</h1>
       <div className={`sidebar ${isSidebarOpen ? 'sidebar-open' : 'sidebar-close'}`}>
-        <a href="#option1" className="sidebar-item">Option 1</a>
-        <a href="#option2" className="sidebar-item">Option 2</a>
-        <a href="#option3" className="sidebar-item">Option 3</a>
+        <button onClick={() => handleCloseSidebar('home')} className="sidebar-item">
+          Home
+        </button>
+        <button onClick={() => handleCloseSidebar('videos')} className="sidebar-item">
+          Videos
+        </button>
+        <button onClick={() => handleCloseSidebar('about')} className="sidebar-item">
+          About
+        </button>
       </div>
     </div>
   );
