@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { IonContent, IonHeader, IonPage } from '@ionic/react';
 import Header from '../components/Header/Header';
+import VideoFinder from './VideoFinder/VideoFinder';
 import About from './About/About';
 import './Index.css';
 
@@ -35,13 +36,7 @@ const Index: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen>
         <div className="content">
-          {activeSection === 'home' && (
-            <div className="home-section">
-              <h1>Welcome to TetoCatch</h1>
-              <button onClick={() => (window.location.hash = 'about')}>Go to About</button>
-              <button onClick={() => (window.location.hash = 'video')}>View Options</button>
-            </div>
-          )}
+          {activeSection === 'home' && <VideoFinder />}
           {activeSection === 'about' && <About />}
           {activeSection === 'options' && (
             <div className="options-section">
