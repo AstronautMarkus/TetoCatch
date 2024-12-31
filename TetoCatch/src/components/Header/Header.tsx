@@ -32,13 +32,11 @@ const Header: React.FC<HeaderProps> = ({ title, showBackButton, onBackButtonClic
         </button>
       )}
       <h1 className="header-title">{title}</h1>
-      {isSidebarOpen && (
-        <div className="sidebar">
-          <a href="#option1" className="sidebar-item">Option 1</a>
-          <a href="#option2" className="sidebar-item">Option 2</a>
-          <a href="#option3" className="sidebar-item">Option 3</a>
-        </div>
-      )}
+      <div className={`sidebar ${isSidebarOpen ? 'sidebar-open' : 'sidebar-close'}`}>
+        <a href="#option1" className="sidebar-item">Option 1</a>
+        <a href="#option2" className="sidebar-item">Option 2</a>
+        <a href="#option3" className="sidebar-item">Option 3</a>
+      </div>
     </div>
   );
 };
