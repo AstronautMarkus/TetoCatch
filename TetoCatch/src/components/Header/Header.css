@@ -1,0 +1,85 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6005c; /* Header color */
+  color: white;
+  padding: 15px 25px;
+  height: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0 10px;
+  outline: none;
+}
+
+.back-button:hover {
+  color: #ffccda;
+}
+
+.header-icon {
+  width: 70px; /* Icon size */
+  height: 70px; /* Icon size */
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Image adjustment */
+  margin-right: 5px; /* Reduce separation */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 10px 20px;
+    height: 70px;
+  }
+
+  .header-title {
+    font-size: 1.4rem;
+  }
+
+  .back-button {
+    font-size: 1.1rem;
+    padding: 0 8px;
+  }
+
+  .header-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 5px; /* Reduce separation */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 8px 16px;
+    height: 60px;
+  }
+
+  .header-title {
+    font-size: 1.2rem;
+  }
+
+  .back-button {
+    font-size: 1rem;
+    padding: 0 6px;
+  }
+
+  .header-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px; /* Reduce separation */
+  }
+}
