@@ -58,11 +58,17 @@
 }
 
 .video-thumbnail {
-    width: 300px;
-    height: auto;
-    margin-bottom: 20px;
+    width: 130px;
+    height: auto; /* Make it a square */
+    object-fit: cover; /* Ensure the image covers the area */
+    margin-top: 20vh;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Add transition for zoom effect */
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.1); /* Zoom effect */
 }
 
 .video-info {
